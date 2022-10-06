@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "building": "Habitat 67",
+        "architect": "Moshe Safdie",
+        "city": "Montréal",
+        "year": 1967,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/9/9f/Montreal_-_QC_-_Habitat67.jpg",
+            "https://images.adsttc.com/media/images/51e8/53d1/e8e4/4e33/c300/0014/slideshow/2608904426_cf57258beb_o.jpg?1374180293",
+            "https://upload.wikimedia.org/wikipedia/commons/f/fd/Habitat_67_%28Montreal%29.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/e/e3/Habitat_panorama.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "building": "Geisel Library",
+        "architect": "William Pereira",
+        "city": "San Diego",
+        "year": 1970,
+        "images": [
+            "https://storage.googleapis.com/clio-images/34924.82684.jpg",
+            "https://preview.redd.it/yfqnkyrf2sy61.jpg?width=640&crop=smart&auto=webp&s=1eee10bacc8d6c3c4c7a621f3cc5c86b63876772"
+        ]
+    },
+    {
+        "id": 3,
+        "building": "Trellick Tower",
+        "architect": "Ernő Goldfinger",
+        "city": "London",
+        "year": 1972,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/1/12/Balconies_of_the_Trellick_Tower.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/ff/Trellick_Tower_front_view_%28colour_brightness_adjust%29.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "building": "Torre Velasca",
+        "architect": "BBPR studio",
+        "city": "Milan",
+        "year": 1958,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/en/7/7e/Milano_Italy_Torre-Velasca-from-Duomo-01.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/7/7e/Paolo_Monti_-_Servizio_fotografico_-_BEIC_6338756.jpg"
+        ]
+    }
+]
