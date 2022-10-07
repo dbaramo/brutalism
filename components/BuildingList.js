@@ -5,17 +5,27 @@ import { useState } from "react";
 
 function BuildingRow({ building, city, year, architect, images, setImgUrl }) {
   let buildingNameWithoutSpace = building.replace(" ", "-");
+  let [textColor, setTextColor] = useState("");
+  let [textOutline, setTextOutline] = useState("");
   return (
     <Link href={`/buildings/${buildingNameWithoutSpace}`}>
       <tr
         className={styles.tableRow}
-        onMouseOver={(e) => setImgUrl(images[1])}
-        onMouseLeave={(e) => setImgUrl("")}
+        onMouseOver={(e) => {
+          setImgUrl(images[1])
+          setTextColor("#ff7f11")
+          setTextOutline("1px black")
+        }}
+        onMouseLeave={(e) => {
+          setImgUrl("")
+          setTextColor("")
+          setTextOutline("")
+        }}
       >
-        <td>{building}</td>
-        <td>{architect}</td>
-        <td>{city}</td>
-        <td>{year}</td>
+        <td style={{ color: textColor}}>{building}</td>
+        <td style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{architect}</td>
+        <td style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{city}</td>
+        <td style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{year}</td>
       </tr>
     </Link>
   );

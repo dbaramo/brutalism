@@ -1,5 +1,16 @@
 [
     {
+        "id": 0,
+        "building": "Breuer Building",
+        "architect": "Marcel Breuer",
+        "city": "NYC",
+        "year": 1966,
+        "images": [
+            "https://www.centralpark.com/downloads/8556/download/Whitney_Museum_of_American_Art_Gryffindor_WikimediaCommons.jpg?cb=5d2e7aca4d0dc42cc15d5ff076a4af82",
+            "https://upload.wikimedia.org/wikipedia/commons/b/bb/MET_Breuer_%2848377070386%29.jpg"
+        ]
+    },
+    {
         "id": 1,
         "building": "Habitat 67",
         "architect": "Moshe Safdie",
@@ -31,7 +42,8 @@
         "year": 1972,
         "images": [
             "https://upload.wikimedia.org/wikipedia/commons/1/12/Balconies_of_the_Trellick_Tower.jpg",
-            "https://upload.wikimedia.org/wikipedia/commons/f/ff/Trellick_Tower_front_view_%28colour_brightness_adjust%29.jpg"
+            "https://upload.wikimedia.org/wikipedia/commons/f/ff/Trellick_Tower_front_view_%28colour_brightness_adjust%29.jpg",
+            "https://media.gq.com/photos/5b6b2c3c6515980b722b5274/master/w_1600,c_limit/The-Brutal-Wonders-Of-The-Architecture-World-GQ-Style-Fall-2018_03.jpg"
         ]
     },
     {
@@ -44,5 +56,83 @@
             "https://upload.wikimedia.org/wikipedia/en/7/7e/Milano_Italy_Torre-Velasca-from-Duomo-01.jpg",
             "https://upload.wikimedia.org/wikipedia/commons/7/7e/Paolo_Monti_-_Servizio_fotografico_-_BEIC_6338756.jpg"
         ]
+    },
+    {
+        "id": 5,
+        "building": "Western City Gate (Genex Tower)",
+        "architect": "Mihajlo Mitrović",
+        "city": "Belgrade",
+        "year": 1979,
+        "images": [
+            "https://herbertwright.files.wordpress.com/2012/06/dsc00815.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jugotours_Beograd_Dec_2003.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "building": "Preston bus station",
+        "architect": "Keith Ingham",
+        "city": "Preston",
+        "year": 1969,
+        "images": [
+            "https://en.wikipedia.org/wiki/Preston_bus_station#/media/File:Preston_bus_station_232-26.jpg",
+            "https://i.guim.co.uk/img/media/a936a688054d0f94b841fb566131d6977053920d/0_351_7952_4771/master/7952.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e3d48a6f027b79672935dfbb3b0e8685"
+        ]
+    },
+    {
+        "id": 7,
+        "building": "Buzludzha monument",
+        "architect": "Georgi Stoilov",
+        "city": "Buzludzha Peak",
+        "year": 1981,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6a/Sunset_and_Buzludza.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/c/cf/%D0%91%D1%83%D0%B7%D0%BB%D1%83%D0%B4%D0%B6%D0%B0_IMG6338.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "building": "111 Somerset",
+        "architect": "Group 2 Architects",
+        "city": "Singapore",
+        "year": 2015,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/3/33/Singapore_Power_Building_4%2C_Aug_07.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/4/48/Singapore_Power_Building%2C_Dec_05.JPG"
+        ]
+    },
+    {
+        "id": 9,
+        "building": "Hotel Marcel",
+        "architect": "Marcel Breuer",
+        "city": "New Haven",
+        "year": 1970,
+        "images": [
+            "https://en.wikipedia.org/wiki/Hotel_Marcel#/media/File:Pirelli_Tire_Building_New_Haven.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f7/IKEA-Pirelli-Building-New-Haven-Connecticut-04-2014.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "building": "Robarts Library",
+        "architect": "Mathers & Haldenby",
+        "city": "Toronto",
+        "year": 1973,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/1/1a/Robartslibrary3.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/b/b3/Robarts_Library-2.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "building": "J. Edgar Hoover Building",
+        "architect": "Charles Murphy",
+        "city": "Washington, D.C.",
+        "year": 1975,
+        "images": [
+            "https://upload.wikimedia.org/wikipedia/commons/5/5f/Washington_DC%2C_FBI_-_panoramio.jpg",
+            "https://www.washingtonian.com/wp-content/uploads/2018/07/107611925_f9dc8c0e97_o.jpg"
+        ]
     }
+
 ]

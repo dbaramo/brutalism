@@ -7,6 +7,7 @@
     border-collapse: collapse;
     position: relative;
     z-index: 2;
+    
 }
 
 .coulmnHead {
@@ -21,7 +22,17 @@
 
 .tableRow {
     border-bottom: 3px solid white;
-  }
+}
+
+.tableRow td {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.tableRow td:hover {
+    cursor: pointer;
+}
 
 .imageHover {
     position: fixed;
@@ -30,7 +41,6 @@
     height: 100vh;
     width: 50%;
     z-index: 1;
-    background-image: url("https://images.adsttc.com/media/images/51e8/53d1/e8e4/4e33/c300/0014/slideshow/2608904426_cf57258beb_o.jpg?1374180293");
     background-size: cover;
     background-repeat: no-repeat;
 }
