@@ -7,6 +7,22 @@
 
 }
 
+@font-face {
+  font-family: 'NeueMeranaSemi';
+  src: url('./Neue-Metana-Next-Free-Personal-Use/NeueMetanaNext-SemiBold.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Leiko';
+  src: url('./Leiko-Regular.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 html,
 body {
   padding: 0;
