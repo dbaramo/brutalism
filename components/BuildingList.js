@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 function BuildingRow({ building, city, year, architect, images, setImgUrl }) {
-  let buildingNameWithoutSpace = building.replace(" ", "-");
+  let buildingNameWithoutSpace = building.replaceAll(" ", "-");
   let [textColor, setTextColor] = useState("");
   let [textOutline, setTextOutline] = useState("");
   return (

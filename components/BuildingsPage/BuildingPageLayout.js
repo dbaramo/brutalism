@@ -6,7 +6,9 @@ export default function BuildingPageLayout(props) {
   return (
     <div className={styles.container}>
       <h1>{building}</h1>
+      <p>Location:</p>
       <p>{city}, {country}</p>
+      <p>Architect:</p>
       <p>{architect}</p>
       <p>{description}</p>
       <Link href={`/`}>
