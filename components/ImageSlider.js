@@ -17,7 +17,7 @@ export default function ImageSlider(){
     return (
         <div 
         style={{
-            backgroundImage: `url(${imagesForSlider[0]})`
+            backgroundImage: `url(${imagesForSlider[imgIndex]})`
         }} className={styles.divStyle}
         ref={divElement}
         >

@@ -12,6 +12,7 @@ function BuildingRow({ building, city, year, architect, images, setImgUrl }) {
       <tr
         className={styles.tableRow}
         onMouseOver={(e) => {
+          // setImgUrl(images[1])
           setImgUrl(images[1])
           setTextColor("#ff7f11")
           setTextOutline("1px black")
