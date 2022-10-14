@@ -1,9 +1,10 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    text-align: center;
+    /* text-align: center; */
     background-color: black;
     color: white;
+    display: flex;
 }
 
 .container h1 {
@@ -13,4 +14,30 @@
     text-transform: uppercase;
     font-family: 'Leiko';
     font-weight: lighter;
+}
+
+.leftDiv {
+    width: 50%;
+    /* padding: 2rem; */
+}
+
+.rightDiv {
+    position: fixed;
+    left: 50%;
+    height: 100vh;
+    background-color: khaki;
+    width: 50%;
+    text-align: center;
+}
+
+.rightDiv img {
+    max-height: 500px;
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    padding: 1rem;
 }

@@ -20,14 +20,9 @@ export function getStaticPaths() {
 }
 
 export default function BuildingPage({ data }) {
-  let { architect, building, city, country, description } = data;
   return (
     <BuildingPageLayout 
-      building={building} 
-      architect={architect} 
-      city={city} 
-      country={country}
-      description={description}
+      data={data}
     />
   );
 }

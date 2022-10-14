@@ -3,7 +3,7 @@ import buildings from "../data/data.json";
 import Link from "next/link";
 import { useState } from "react";
 
-function BuildingRow({ building, city, year, architect, images, setImgUrl }) {
+function BuildingRow({ building, city, year, architect, images, setImgUrl, setDisplayState }) {
   let buildingNameWithoutSpace = building.replaceAll(" ", "-");
   let [textColor, setTextColor] = useState("");
   let [textOutline, setTextOutline] = useState("");
@@ -12,15 +12,16 @@ function BuildingRow({ building, city, year, architect, images, setImgUrl }) {
       <tr
         className={styles.tableRow}
         onMouseOver={(e) => {
-          // setImgUrl(images[1])
           setImgUrl(images[1])
           setTextColor("#ff7f11")
           setTextOutline("1px black")
+          setDisplayState("block")
         }}
         onMouseLeave={(e) => {
           setImgUrl("")
           setTextColor("")
           setTextOutline("")
+          setDisplayState("none")
         }}
       >
         <td style={{ color: textColor}}>{building}</td>
@@ -34,6 +35,7 @@ function BuildingRow({ building, city, year, architect, images, setImgUrl }) {
 
 export default function BuildingList() {
   const [imgUrl, setImgUrl] = useState("");
+  const [displayState, setDisplayState] = useState("none");
   return (
     <div>
       <div className={styles.tableDiv}>
@@ -58,6 +60,7 @@ export default function BuildingList() {
                     images={images}
                     key={id}
                     setImgUrl={setImgUrl}
+                    setDisplayState={setDisplayState}
                   />
                 );
               }
@@ -66,7 +69,9 @@ export default function BuildingList() {
         </table>
       </div>
       <div style={{ 
-        backgroundImage: `url(${imgUrl})` }} 
+        backgroundImage: `url(${imgUrl})`,
+        display: displayState
+      }} 
         className={styles.imageHover} 
       />
     </div>

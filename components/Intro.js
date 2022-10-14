@@ -1,6 +1,6 @@
 export default function Intro(){
     return (
-        <div>
+        <div className="intro">
             <p>Brutalism is a style of architecture that lasted from the 1950s-1970s, 
             and it was characterized by simple, block-like, hulking concrete structures. 
             It originated in England and spread to the rest of the world shortly after.
