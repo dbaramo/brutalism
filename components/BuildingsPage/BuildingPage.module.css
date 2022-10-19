@@ -21,6 +21,18 @@
     /* padding: 2rem; */
 }
 
+.leftDiv h1 {
+    text-align: center;
+}
+
+.metaData {
+    text-align: center;
+}
+
+.metaData span:first-of-type {
+    color: khaki;
+}
+
 .rightDiv {
     position: fixed;
     left: 50%;
@@ -30,10 +42,28 @@
     text-align: center;
 }
 
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .rightDiv img {
-    max-height: 500px;
-    max-width: 500px;
-    padding: 2rem;
+    max-height: 80vh;
+    max-width: 80%;
+}
+
+.rightArrow {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.leftArrow {
+    padding: 1rem;
+    cursor: pointer;
 }
 
 .description {
