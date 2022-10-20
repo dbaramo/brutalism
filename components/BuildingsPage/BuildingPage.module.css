@@ -7,6 +7,18 @@
     display: flex;
 }
 
+.homeBtn {
+    margin: 10px;
+    padding: 0.5rem;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.homeBtn:hover {
+    border: 1px solid khaki;
+    cursor: pointer;
+}
+
 .container h1 {
     margin: 0;
     font-size: 3rem;
@@ -14,6 +26,7 @@
     text-transform: uppercase;
     font-family: 'Leiko';
     font-weight: lighter;
+    animation: fadein 2s;
 }
 
 .leftDiv {
@@ -29,6 +42,10 @@
     text-align: center;
 }
 
+.metaData span {
+    animation: fadein 2s;
+}
+
 .metaData span:first-of-type {
     color: khaki;
 }
@@ -38,6 +55,7 @@
     left: 50%;
     height: 100vh;
     background-color: khaki;
+    background-image: linear-gradient(to bottom right, khaki, white);
     width: 50%;
     text-align: center;
 }
@@ -70,4 +88,12 @@
     margin-top: 30px;
     font-size: 1.8rem;
     padding: 1rem;
+    transform-origin: bottom;
+    animation: fadein 2s;
+    /* animation: grow 3s; */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 100; }
 }

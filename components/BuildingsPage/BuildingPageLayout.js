@@ -40,6 +40,9 @@ export default function BuildingPageLayout(props) {
   return (
     <div className={styles.container}>
       <div className={styles.leftDiv}>
+        <Link href={`/`}>
+        <img className={styles.homeBtn} src="/arrow-left.svg" />
+        </Link>
         <div className={styles.metaData}>
           <h1>{building}</h1>
           <span>Location: </span>
@@ -54,9 +57,6 @@ export default function BuildingPageLayout(props) {
         <div className={styles.description}>
           <span>{description}</span>
         </div>
-        <Link href={`/`}>
-          <button>Home</button>
-        </Link>
       </div>
       <div ref={imgsDiv} className={styles.rightDiv}>
         <div className={styles.frame}>
