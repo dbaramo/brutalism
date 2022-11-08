@@ -1,3 +1,7 @@
+.sliderImg {
+    cursor: pointer;
+}
+
 .divStyle {
     background-color: beige;
     z-index: 1;
@@ -31,4 +35,37 @@
 .sliderControls .rightArrow {
     margin-left: 10px;
     margin-right: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .sliderImg {
+        outline: 1px solid pink;
+        height: 55vh;
+    }
+    .textSection {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        align-content: center;
+        padding-top: 0.5rem;
+    }
+
+    .textSection span {
+        display: block;
+    }
+
+    .sliderControls {
+        display: block;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+
+    .sliderControls .rightArrow {
+        margin: 0;
+    }
+    
+    .sliderControls img{
+        padding: 0 0.5rem;
+    }
 }

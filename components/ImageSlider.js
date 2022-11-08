@@ -38,15 +38,9 @@ export default function ImageSlider(){
     }
     
     return (    
-        <div>
+        <div className={styles.sliderDiv}>
             <Link href={`/buildings/${buildingSlugs[imgIndex]}`}>
-                <div 
-                style={{
-                    backgroundImage: `url(${imagesForSlider[imgIndex]})`
-                }} className={styles.divStyle}
-                ref={divElement}
-                >
-                </div>
+                <img className={styles.sliderImg} width="100%" height="100%" src={imagesForSlider[imgIndex]}/>
             </Link>
             <div className={styles.textSection}>
                 <div className={styles.sliderControls}>
@@ -60,3 +54,12 @@ export default function ImageSlider(){
         </div>
         )
 }
+
+
+// <div 
+// style={{
+//     backgroundImage: `url(${imagesForSlider[imgIndex]})`
+// }} className={styles.divStyle}
+// ref={divElement}
+// >
+// </div>

@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <div className='mainDiv'>
     <Head>
+    <title>Brutalism</title>
     {buildingImages.map((img) => {
       return <link key={img} rel="preload" as="image" href={img} />
     })}

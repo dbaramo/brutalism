@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./BuildingPage.module.css";
@@ -38,47 +39,52 @@ export default function BuildingPageLayout(props) {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.leftDiv}>
-        <Link href={`/`}>
-        <img className={styles.homeBtn} src="/arrow-left.svg" />
-        </Link>
-        <div className={styles.metaData}>
-          <h1>{building}</h1>
-          <span>Location: </span>
-          <span>
-            {city}, {country}
-          </span>
+    <>
+      <Head>
+        <title>{building}</title>
+      </Head>
+      <div className={styles.container}>
+        <div className={styles.leftDiv}>
+          <Link href={`/`}>
+            <img className={styles.homeBtn} src="/arrow-left.svg" />
+          </Link>
+          <div className={styles.metaData}>
+            <h1>{building}</h1>
+            <span>Location: </span>
+            <span>
+              {city}, {country}
+            </span>
+          </div>
+          <div className={styles.metaData}>
+            <span>Architect: </span>
+            <span>{architect}</span>
+          </div>
+          <div className={styles.description}>
+            <span>{description}</span>
+          </div>
         </div>
-        <div className={styles.metaData}>
-          <span>Architect: </span>
-          <span>{architect}</span>
-        </div>
-        <div className={styles.description}>
-          <span>{description}</span>
-        </div>
-      </div>
-      <div ref={imgsDiv} className={styles.rightDiv}>
-        <div className={styles.frame}>
-          <img className="building-imgs" src={images[imgIndex]} />
-          <div className={styles.arrowsDiv}>
-            <img
-              onClick={prevImage}
-              className={styles.leftArrow}
-              src="/arrow-left-black.svg"
-              width={26}
-              height={20}
-            />
-            <img
-              onClick={nextImage}
-              className={styles.rightArrow}
-              src="/arrow-right-black.svg"
-              width={26}
-              height={20}
-            />
+        <div ref={imgsDiv} className={styles.rightDiv}>
+          <div className={styles.frame}>
+            <img className="building-imgs" src={images[imgIndex]} />
+            <div className={styles.arrowsDiv}>
+              <img
+                onClick={prevImage}
+                className={styles.leftArrow}
+                src="/arrow-left-black.svg"
+                width={26}
+                height={20}
+              />
+              <img
+                onClick={nextImage}
+                className={styles.rightArrow}
+                src="/arrow-right-black.svg"
+                width={26}
+                height={20}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
