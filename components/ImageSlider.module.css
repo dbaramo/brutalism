@@ -37,9 +37,8 @@
     margin-right: 20px;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px){    
     .sliderImg {
-        outline: 1px solid pink;
         height: 55vh;
     }
     .textSection {

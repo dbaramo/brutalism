@@ -24,10 +24,10 @@ function BuildingRow({ building, city, year, architect, images, setImgUrl, setDi
           setDisplayState("none")
         }}
       >
-        <td style={{ color: textColor}}>{building}</td>
-        <td style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{architect}</td>
-        <td style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{city}</td>
-        <td style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{year}</td>
+        <td className={styles.coulmnBuilding} style={{ color: textColor}}>{building}</td>
+        <td className={styles.coulmnArchitect} style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{architect}</td>
+        <td className={styles.coulmnCity} style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{city}</td>
+        <td className={styles.coulmnYear} style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{year}</td>
       </tr>
     </Link>
   );
@@ -42,10 +42,10 @@ export default function BuildingList() {
         <table className={styles.mainTable}>
           <thead>
             <tr className={styles.tableRow}>
-              <th className={styles.coulmnHead}>Building</th>
-              <th className={styles.coulmnHead}>Architect</th>
-              <th className={styles.coulmnHead}>City</th>
-              <th className={styles.coulmnHead}>Year</th>
+              <th className={`${styles.coulmnHead} ${styles.coulmnBuilding}`}>Building</th>
+              <th className={`${styles.coulmnHead} ${styles.coulmnArchitect}`}>Architect</th>
+              <th className={`${styles.coulmnHead} ${styles.coulmnCity}`}>City</th>
+              <th className={`${styles.coulmnHead} ${styles.coulmnYear}`}>Year</th>
             </tr>
           </thead>
           <tbody>

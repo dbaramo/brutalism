@@ -10,6 +10,7 @@
     
 }
 
+
 .coulmnHead {
     text-align: left;
     text-transform: uppercase;
@@ -22,6 +23,7 @@
 
 .tableRow {
     border-bottom: 3px solid white;
+    cursor: pointer;
 }
 
 .tableRow td {
@@ -30,8 +32,8 @@
     color: white;
 }
 
-.tableRow td:hover {
-    cursor: pointer;
+.tableRow th {
+    cursor: default;
 }
 
 .imageHover {
@@ -44,4 +46,35 @@
     z-index: 1;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 900px){
+    .mainTable {
+        margin-top: 1rem;
+    }
+    .tableRow {
+        cursor: pointer;
+    }
+
+    .imageHover {
+        display: none !important;
+    }
+
+    .coulmnHead, .tableRow td {
+        font-size: calc(1.9vw + 1.9vh);
+    }
+    
+    .coulmnYear, .coulmnArchitect{
+        display: none;
+    }
+
+    .coulmnCity {
+        float: right;
+        margin-right: 1rem;
+    }
+
+    .coulmnBuilding {
+        float: left;
+        margin-left: 1rem;
+    }
 }
