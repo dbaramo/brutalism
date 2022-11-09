@@ -1,5 +1,11 @@
+
 .sliderImg {
     cursor: pointer;
+}
+
+.sliderImg:hover {
+    box-sizing: border-box;
+    border: 2px solid #ff7f11;
 }
 
 .divStyle {
