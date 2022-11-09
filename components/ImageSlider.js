@@ -2,10 +2,11 @@ import styles from "./ImageSlider.module.css";
 import buildings from "../data/data.json";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion";
 
 const imagesForSlider = buildings.map((b) => b.images[0]);
 const buildingSlugs = buildings.map((b) => b.building.replaceAll(" ", "-"));
+let timers = []
 
 export default function ImageSlider() {
   const [imgIndex, setImgIndex] = useState(0);
@@ -13,15 +14,14 @@ export default function ImageSlider() {
   const [arrowBeingHoveredRight, setArrowBeingHoveredRight] = useState(false);
   const divElement = useRef(null);
 
-  // useEffect(() => {
-  //     if(imgIndex === imagesForSlider.length) {
-  //         setImgIndex(0)
-  //     }
-  //     divElement.current.style.backgroundImage = `url(${imagesForSlider[imgIndex]})`
-
-  // }, [imgIndex])
-
-  // setTimeout(() => setImgIndex(imgIndex + 1), 3000)
+useEffect(() => {
+    while(timers.length){
+        clearTimeout(timers.pop())
+    }
+    timers.push(setTimeout(() => {
+        nextImage();
+      }, 3000))
+}, [imgIndex])
 
   function nextImage() {
     if (imgIndex === imagesForSlider.length - 1) {
@@ -41,28 +41,29 @@ export default function ImageSlider() {
 
   return (
     <div className={styles.sliderDiv}>
-    <AnimatePresence>
-      <Link href={`/buildings/${buildingSlugs[imgIndex]}`}>
-        <motion.img
-        key={imagesForSlider[imgIndex]}
-          className={styles.sliderImg}
-          width="100%"
-          height="100%"
-          src={imagesForSlider[imgIndex]}
-          initial={{ x: 200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -200, opacity: 0 }}
-          transition={{
-            // delay: 0.5,
-            opacity: { duration: 0.5 },
-            default: { ease: "linear" }
-          }}
-        />
-      </Link>
+      <AnimatePresence>
+        <Link href={`/buildings/${buildingSlugs[imgIndex]}`}>
+          <motion.img
+            key={imagesForSlider[imgIndex]}
+            className={styles.sliderImg}
+            width="100%"
+            height="100%"
+            src={imagesForSlider[imgIndex]}
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -200, opacity: 0 }}
+            transition={{
+              // delay: 0.5,
+              opacity: { duration: 0.5 },
+              default: { ease: "linear" },
+            }}
+          />
+        </Link>
       </AnimatePresence>
       <div className={styles.textSection}>
         <div className={styles.sliderControls}>
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
             onMouseEnter={() => setArrowBeingHoveredLeft(true)}
             onMouseLeave={() => setArrowBeingHoveredLeft(false)}
             src={
@@ -72,9 +73,10 @@ export default function ImageSlider() {
             }
             width={26}
             height={20}
-            onClick={() => prevImage()}
+            onClick={prevImage}
           />
-          <img
+          <motion.img
+            whileHover={{ scale: 1.2 }}
             onMouseEnter={() => setArrowBeingHoveredRight(true)}
             onMouseLeave={() => setArrowBeingHoveredRight(false)}
             className={styles.rightArrow}
@@ -85,11 +87,13 @@ export default function ImageSlider() {
             }
             width={26}
             height={20}
-            onClick={() => nextImage()}
+            onClick={nextImage}
           />
         </div>
         <Link href={`/buildings/${buildingSlugs[imgIndex]}`}>
-          <span>{buildings[imgIndex].building}</span>
+          <motion.span whileHover={{ scale: 1.2 }}>
+            {buildings[imgIndex].building}
+          </motion.span>
         </Link>
       </div>
     </div>
