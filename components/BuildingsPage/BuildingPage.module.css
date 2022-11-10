@@ -1,10 +1,8 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    /* text-align: center; */
     background-color: black;
     color: white;
-    display: flex;
 }
 
 .homeBtn {
@@ -12,11 +10,13 @@
     padding: 0.5rem;
     width: 2rem;
     height: 1.5rem;
+    transition: scale 0.2s, border 0.2s;
 }
 
 .homeBtn:hover {
     border: 1px solid khaki;
     cursor: pointer;
+    scale: 1.2;
 }
 
 .container h1 {
@@ -26,74 +26,140 @@
     text-transform: uppercase;
     font-family: 'Leiko';
     font-weight: lighter;
-    animation: fadein 2s;
 }
 
-.leftDiv {
-    width: 50%;
-    /* padding: 2rem; */
+.topHalfIntro {
+    animation-name: top-half-intro;
+    animation-duration: 2s;
+    clip-path: inset(0 0 0 0);
 }
 
-.leftDiv h1 {
+@keyframes top-half-intro {
+    from {
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+  }
+
+.mainDiv h1 {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .metaData {
     text-align: center;
-}
-
-.metaData span {
-    animation: fadein 2s;
+    margin-bottom: 10px;
+    
 }
 
 .metaData span:first-of-type {
     color: khaki;
 }
 
-.rightDiv {
-    position: fixed;
-    left: 50%;
-    height: 100vh;
-    background-color: khaki;
-    background-image: linear-gradient(to bottom right, khaki, white);
-    width: 50%;
-    text-align: center;
-}
-
-.frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.rightDiv img {
-    max-height: 80vh;
-    max-width: 80%;
+.arrowsDiv img:hover {
+    scale: 1.2;
 }
 
 .rightArrow {
-    padding: 1rem;
+    margin: 1rem;
     cursor: pointer;
 }
 
 .leftArrow {
-    padding: 1rem;
+    margin: 1rem;
     cursor: pointer;
 }
 
 .description {
-    margin-top: 30px;
     font-size: 1.8rem;
-    padding: 1rem;
-    transform-origin: bottom;
-    animation: fadein 2s;
-    /* animation: grow 3s; */
+    line-height: 2.5rem;
+    width: 90%;
+    /* padding: 1rem; */
+    margin: auto;
+    /* outline: 1px solid red; */
+    padding-bottom: 1rem;
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 100; }
+.descriptionAnimation {
+    animation-name: description-animation;
+    animation-duration: 4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
+
+@keyframes description-animation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+  }
+
+  .homeArrowAnimation {
+    animation-name: home-arrow-animation;
+    animation-delay: 1s;
+    animation-duration: 1.3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+@keyframes home-arrow-animation {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+  }
+
+.imageContainer {
+    width: 90%;
+    height: 50vh;
+    /* background-color: blue; */
+    text-align: center;
+    margin: 20px auto auto auto;
+}
+
+.buildingImg {
+    height: 85%;
+    max-width: 90vw;
+    animation-duration: 1.5s;
+    animation-name: main-image-animation;
+}
+
+@keyframes main-image-animation {
+    from {
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    .container h1 {
+        font-size: calc(2.5vw + 2.5vh);
+    }
+
+    .homeBtn {
+        width: 1.8rem;
+        height: 1.3rem;
+    }
+
+    .description {
+        font-size: calc(1.8vw + 1.8vh);
+        line-height: calc(2.5vw + 2.5vh);
+    }
+
+    .metaData {
+        text-align: center;
+        font-size: calc(1.2vw + 1.2vh);
+    }
+  }

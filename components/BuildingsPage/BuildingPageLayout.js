@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from "./BuildingPage.module.css";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { motion } from "framer-motion";
 
 export default function BuildingPageLayout(props) {
   let { architect, building, city, country, description, images } = props.data;
@@ -44,44 +45,46 @@ export default function BuildingPageLayout(props) {
         <title>{building}</title>
       </Head>
       <div className={styles.container}>
-        <div className={styles.leftDiv}>
+        <div className={styles.mainDiv}>
           <Link href={`/`}>
-            <img className={styles.homeBtn} src="/arrow-left.svg" />
+            <img className={`${styles.homeBtn} ${styles.homeArrowAnimation}`} src="/arrow-left.svg" />
           </Link>
           <div className={styles.metaData}>
-            <h1>{building}</h1>
-            <span>Location: </span>
-            <span>
+            <h1 className={styles.topHalfIntro}>{building}</h1>
+            <span className={styles.topHalfIntro}>Location: </span>
+            <span className={styles.topHalfIntro}>
               {city}, {country}
             </span>
           </div>
           <div className={styles.metaData}>
-            <span>Architect: </span>
-            <span>{architect}</span>
+            <span className={styles.topHalfIntro}>Architect: </span>
+            <span className={styles.topHalfIntro}>{architect}</span>
           </div>
-          <div className={styles.description}>
-            <span>{description}</span>
-          </div>
-        </div>
-        <div ref={imgsDiv} className={styles.rightDiv}>
-          <div className={styles.frame}>
-            <img className="building-imgs" src={images[imgIndex]} />
+          <div className={styles.imageContainer}>
+            <img className={`${styles.buildingImg}`} src={images[imgIndex]} />
             <div className={styles.arrowsDiv}>
               <img
                 onClick={prevImage}
-                className={styles.leftArrow}
-                src="/arrow-left-black.svg"
+                className={`${styles.leftArrow} ${styles.topHalfIntro}`}
+                src="/arrow-left-khaki.svg"
                 width={26}
                 height={20}
               />
               <img
                 onClick={nextImage}
-                className={styles.rightArrow}
-                src="/arrow-right-black.svg"
+                className={`${styles.rightArrow} ${styles.topHalfIntro}`}
+                src="/arrow-right-khaki.svg"
                 width={26}
                 height={20}
               />
             </div>
+          </div>
+          <div className={styles.description}>
+            <motion.p 
+            className={styles.descriptionAnimation}
+            >
+              {description}
+            </motion.p>
           </div>
         </div>
       </div>
