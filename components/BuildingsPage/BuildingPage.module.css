@@ -154,8 +154,9 @@
     }
 
     .description {
-        font-size: calc(1.8vw + 1.8vh);
-        line-height: calc(2.5vw + 2.5vh);
+        text-align: left;
+        font-size: calc(1.3vw + 1.3vh);
+        line-height: calc(2vw + 2vh);
     }
 
     .metaData {

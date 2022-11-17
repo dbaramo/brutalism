@@ -1,6 +1,7 @@
-
 .sliderImg {
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 .sliderImg:hover {
@@ -44,8 +45,13 @@
 }
 
 @media screen and (max-width: 900px){    
+    .sliderDiv {
+        text-align: center;
+    }
     .sliderImg {
-        height: 55vh;
+        max-width: 500px;
+        min-height: 250px;
+        height: 40vh;
     }
     .textSection {
         text-align: center;
@@ -58,12 +64,14 @@
 
     .textSection span {
         display: block;
+        font-size: 1.2rem;
     }
 
     .sliderControls {
         display: block;
         padding-top: 0.5rem;
         text-align: center;
+        scale: 0.8;
     }
 
     .sliderControls .rightArrow {

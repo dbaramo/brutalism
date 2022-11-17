@@ -10,9 +10,16 @@ let timers = []
 
 export default function ImageSlider() {
   const [imgIndex, setImgIndex] = useState(0);
+  const [hasMobileView, setHasMobileView] = useState(true);
   const [arrowBeingHoveredLeft, setArrowBeingHoveredLeft] = useState(false);
   const [arrowBeingHoveredRight, setArrowBeingHoveredRight] = useState(false);
   const divElement = useRef(null);
+
+useEffect(() => {
+  if (!("ontouchstart" in document.documentElement)){
+    setHasMobileView(false)
+  }
+}, [])
 
 useEffect(() => {
     while(timers.length){
@@ -46,12 +53,12 @@ useEffect(() => {
           <motion.img
             key={imagesForSlider[imgIndex]}
             className={styles.sliderImg}
-            width="100%"
-            height="100%"
+            // width="100%"
+            // height="100%"
             src={imagesForSlider[imgIndex]}
-            initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -200, opacity: 0 }}
+            initial={hasMobileView ? false : { x: 200, opacity: 0 }}
+            animate={hasMobileView ? false : { x: 0, opacity: 1 }}
+            exit={hasMobileView ? false : { x: -200, opacity: 0 }}
             transition={{
               // delay: 0.5,
               opacity: { duration: 0.5 },

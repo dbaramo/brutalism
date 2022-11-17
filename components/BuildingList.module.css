@@ -61,7 +61,7 @@
     }
 
     .coulmnHead, .tableRow td {
-        font-size: calc(1.9vw + 1.9vh);
+        font-size: calc(1.3vw + 1.3vh);
     }
     
     .coulmnYear, .coulmnArchitect{

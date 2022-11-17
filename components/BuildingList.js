@@ -6,7 +6,6 @@ import { useState } from "react";
 function BuildingRow({ building, city, year, architect, images, setImgUrl, setDisplayState }) {
   let buildingNameWithoutSpace = building.replaceAll(" ", "-");
   let [textColor, setTextColor] = useState("");
-  let [textOutline, setTextOutline] = useState("");
   return (
     <Link href={`/buildings/${buildingNameWithoutSpace}`}>
       <tr
@@ -14,20 +13,18 @@ function BuildingRow({ building, city, year, architect, images, setImgUrl, setDi
         onMouseOver={(e) => {
           setImgUrl(images[1])
           setTextColor("#ff7f11")
-          setTextOutline("1px black")
           setDisplayState("block")
         }}
         onMouseLeave={(e) => {
           setImgUrl("")
           setTextColor("")
-          setTextOutline("")
           setDisplayState("none")
         }}
       >
         <td className={styles.coulmnBuilding} style={{ color: textColor}}>{building}</td>
-        <td className={styles.coulmnArchitect} style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{architect}</td>
-        <td className={styles.coulmnCity} style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{city}</td>
-        <td className={styles.coulmnYear} style={{ color: textColor, "-webkit-text-stroke": textOutline}}>{year}</td>
+        <td className={styles.coulmnArchitect} style={{ color: textColor}}>{architect}</td>
+        <td className={styles.coulmnCity} style={{ color: textColor}}>{city}</td>
+        <td className={styles.coulmnYear} style={{ color: textColor}}>{year}</td>
       </tr>
     </Link>
   );
